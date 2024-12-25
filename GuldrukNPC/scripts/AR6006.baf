@@ -1,0 +1,11 @@
+IF
+	InParty("C0GULD")
+	Global("C0GuldrukTL1","MYAREA",0)
+	TriggerOverride("C0NIRIK",See("Evayne Top"))
+	CombatCounter(0)
+THEN
+RESPONSE #100
+	SetGlobal("C0GuldrukTL1","MYAREA",1)
+	Wait(5)
+	DisplayStringHead("C0GULD",~This statue... it is of Larrel's daughter, I believe. The dwarves recognized her as one of their greatest heroes.~)
+END

@@ -1,0 +1,28 @@
+IF
+	True()
+THEN
+  RESPONSE #100
+	CutSceneId("C0GUELF")
+	Wait(1)
+	ActionOverride("C0GULD",SwingOnce())
+	SwingOnce()
+	Wait(1)
+	FadeToColor([20.0],0)
+	Wait(1)
+	ActionOverride("C0GULD",MoveToObject("C0GUELF"))
+	MoveToObject("C0GULD")
+	Wait(2)
+	ActionOverride("C0GULD",JumpToPoint([1014.751]))
+	ActionOverride("C0GULD",Face(NE))
+	JumpToPoint([896.760])
+	Face(SW)
+	Wait(2)
+	FadeFromColor([20.0],0)
+	Wait(2)
+	PlayDead(25)
+	Wait(1)
+	FaceObject("C0GULD")
+	ActionOverride("C0GULD",FaceObject("C0GUELF"))
+	Wait(2)
+	StartDialogNoSet("C0GULD")
+END

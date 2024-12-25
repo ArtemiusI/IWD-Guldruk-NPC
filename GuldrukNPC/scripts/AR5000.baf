@@ -1,0 +1,22 @@
+IF
+	!InMyArea("Larrel")
+	InParty("C0GULD")
+	AreaCheck("AR5000")
+	Global("C0GuldrukTL1","MYAREA",0)
+	CombatCounter(0)
+THEN
+RESPONSE #100
+	SetGlobal("C0GuldrukTL1","MYAREA",1)
+	Wait(2)
+	DisplayStringHead("C0GULD",~The ancient elven stronghold, fallen into ruin. but a living one, if such contradictions can exist.~)
+END
+
+IF
+	GlobalGT("Know_Larrel","GLOBAL",0)
+	Global("C0GuElfSpawn","MYAREA",0)
+	CombatCounter(0)
+THEN
+RESPONSE #100
+	SetGlobal("C0GuElfSpawn","MYAREA",1)
+	CreateCreature("C0GuElf",[1027.534],NE)
+END

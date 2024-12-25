@@ -1,0 +1,25 @@
+IF
+	True()
+THEN
+  RESPONSE #100
+	CutSceneId("C0GUELF")
+	Wait(1)
+	EquipItem("CIFADE")
+	Wait(2)
+	DropItem("C0GULSW1",[-1.-1])
+	Wait(2)
+	ActionOverride("C0GULD",MoveToObject("C0GUELF"))
+	Wait(2)
+	PickUpItem("C0GULSW1")
+	SmallWait(2)
+	GiveItem("C0GULSW1","C0GULD")
+	Wait(1)
+	CreateVisualEffectObject("ICCSWOUI","C0GULD")
+	ActionOverride("C0GULD",XEquipItem("C0GULSW1",Myself,SLOT_WEAPON1,EQUIP))
+	Wait(1)
+	ActionOverride("C0GULD",FaceObject(Player1))
+	Wait(1)
+	ActionOverride("C0GULD",StartDialogNoSet(Player1))
+	EndCutSceneMode()
+	DestroySelf()
+END

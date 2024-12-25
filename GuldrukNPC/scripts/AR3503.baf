@@ -1,0 +1,9 @@
+IF
+	InParty("C0GULD")
+	TriggerOverride("C0ATHAN",SEE("Kresselack"))
+	Global("C0GuldrukTL1","MYAREA",0)
+THEN
+RESPONSE #100
+	SetGlobal("C0GuldrukTL1","MYAREA",1)
+	DisplayStringHead("C0ATHAN",~This warlord's spirit is dark... yet nonetheless mighty. Tread with caution, my friend.~)
+END

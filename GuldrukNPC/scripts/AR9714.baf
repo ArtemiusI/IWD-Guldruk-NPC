@@ -1,0 +1,11 @@
+IF
+	InParty("C0GULD")
+	Global("C0GuldrukTL1","MYAREA",0)
+	Global("Spirits_Freed","GLOBAL",4)
+	CombatCounter(0)
+THEN
+RESPONSE #100
+	SetGlobal("C0GuldrukTL1","MYAREA",1)
+	Wait(2)
+	DisplayStringHead("C0GULD",~Rest well, honored warriors.~)
+END

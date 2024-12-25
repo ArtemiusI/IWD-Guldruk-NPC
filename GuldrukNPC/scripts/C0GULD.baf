@@ -1,0 +1,109 @@
+// TALK - AR1200
+
+IF
+	InParty(Myself)
+	InMyArea(Player1)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	OR(2)
+	Global("C0GuldrukTalkTimer","LOCALS",0)
+	RealGlobalTimerExpired("C0GuldrukTalkTimer","LOCALS")
+	!See([ENEMY])
+	CombatCounter(0)
+	AreaCheck("AR1200")
+	Global("Caravan_Quest","GLOBAL",3)
+	Switch("C0GuldrukTalkAR1200","AR1200")
+THEN
+RESPONSE #0
+	SetGlobal("C0GuldrukTalkAR1200","AR1200",1)
+	RealSetGlobalTimer("C0GuldrukTalkTimer","GLOBAL",4)
+RESPONSE #1
+	SetGlobal("C0GuldrukTalkAR1200","AR1200",2)
+	StartDialogueNoSet(Player1)
+END
+
+// TALK - AR5001
+
+IF
+	InParty(Myself)
+	InMyArea(Player1)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	OR(2)
+	Global("C0GuldrukTalkTimer","LOCALS",0)
+	RealGlobalTimerExpired("C0GuldrukTalkTimer","LOCALS")
+	!See([ENEMY])
+	CombatCounter(0)
+	AreaCheck("AR5001")
+	NearLocation(Myself,1305,1467,10)
+	Switch("C0GuldrukTalkAR5001","AR5001")
+THEN
+RESPONSE #0
+	SetGlobal("C0GuldrukTalkAR5001","AR5001",1)
+	RealSetGlobalTimer("C0GuldrukTalkTimer","GLOBAL",2)
+RESPONSE #1
+	SetGlobal("C0GuldrukTalkAR5001","AR5001",2)
+	StartDialogueNoSet(Player1)
+END
+
+// Black Wolf Talisman
+
+IF
+	InParty(Myself)
+	CombatCounter(0)
+	HasItemEquiped("BWTALIS",Myself)
+	Global("C0GuldrukBlackWolfTalisman","GLOBAL",0)
+THEN
+  RESPONSE #100
+	SetInterrupt(FALSE)
+	SetGlobal("C0GuldrukBlackWolfTalisman","GLOBAL",1)
+	Wait(1)
+	DisplayStringHead(Myself,~I was once of the Bear... but the Wolf is a hunter no less worthy of respect.~)
+	SetInterrupt(TRUE)
+END
+
+// Darkened Glory +2
+
+IF
+	InParty(Myself)
+	CombatCounter(0)
+	HasItemEquiped("SW1H45",Myself)
+	Global("C0GuldrukSW1H45","GLOBAL",0)
+THEN
+  RESPONSE #100
+	SetInterrupt(FALSE)
+	SetGlobal("C0GuldrukSW1H45","GLOBAL",1)
+	Wait(1)
+	DisplayStringHead(Myself,~An eastern blade, here? I shall wield it with great respect.~)
+	SetInterrupt(TRUE)
+END
+
+// Shimmering Sash
+
+IF
+	InParty(Myself)
+	CombatCounter(0)
+	HasItemEquiped("SASH",Myself)
+	Global("C0GuldrukShimmerSash","GLOBAL",0)
+THEN
+  RESPONSE #100
+	SetInterrupt(FALSE)
+	SetGlobal("C0GuldrukShimmerSash","GLOBAL",1)
+	Wait(1)
+	DisplayStringHead(Myself,~A fine sash... and a worthy creed to live by.~)
+	SetInterrupt(TRUE)
+END
+
+// Lord Toadeus
+
+IF
+	InParty(Myself)
+	CombatCounter(0)
+	HasItemEquiped("L#ITOA1",Myself)
+	Global("C0GuldrukLordToadeus","GLOBAL",0)
+THEN
+  RESPONSE #100
+	SetInterrupt(FALSE)
+	SetGlobal("C0GuldrukLordToadeus","GLOBAL",1)
+	Wait(1)
+	DisplayStringHead(Myself,~A toad? A curious companion, but I shall care for it as best I can.~)
+	SetInterrupt(TRUE)
+END

@@ -1,0 +1,11 @@
+IF
+	InParty("C0GULD")
+	Global("C0GuldrukTL1","MYAREA",0)
+	TriggerOverride("C0GULD",See("Trap-Silence"))
+	CombatCounter(0)
+THEN
+RESPONSE #100
+	SetGlobal("C0GuldrukTL1","MYAREA",1)
+	Wait(2)
+	DisplayStringHead("C0GULD",~Traces of werejackals line these stones, my friend. Be wary of traps and ambushes.~)
+END

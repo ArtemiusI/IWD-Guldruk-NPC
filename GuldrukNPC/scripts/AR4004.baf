@@ -1,0 +1,12 @@
+IF
+	InParty("C0GULD")
+	NearLocation("C0GULD",892,1533,10)
+	Global("CDTalkedAlbion","GLOBAL",1)
+	!Global("Yuanti_Inferno","GLOBAL",1)
+	Global("C0GuldrukTL1","MYAREA",0)
+	CombatCounter(0)
+THEN
+RESPONSE #100
+	SetGlobal("C0GuldrukTL1","MYAREA",1)
+	DisplayStringHead("C0GULD",~This foul atmosphere offends the senses... no Eldathyn would find peace in a place so vile.~)
+END

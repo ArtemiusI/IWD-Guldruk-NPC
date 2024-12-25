@@ -1,0 +1,7 @@
+IF
+	Global("C0GuldrukSpawn","ar1000",0)
+THEN
+RESPONSE #100
+	SetGlobal("C0GuldrukSpawn","ar1000",1)
+	CreateCreatureImpassable("C0GULD",[2194.1460],SW)
+END

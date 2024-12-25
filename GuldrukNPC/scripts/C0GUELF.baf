@@ -1,0 +1,20 @@
+IF
+	ActionListEmpty()
+	Delay(3)
+THEN
+  RESPONSE #50
+	SwingOnce()
+  RESPONSE #50
+    NoAction()
+END
+
+IF
+	Range([PC],15)
+	NumTimesTalkedTo(0)
+THEN
+  RESPONSE #100
+	Wait(1)
+	FaceObject([PC])
+	Wait(1)
+	StartDialogNoSet([PC])
+END

@@ -1,0 +1,23 @@
+IF
+	True()
+THEN
+  RESPONSE #100
+	CutSceneId("C0GUELF")
+	Wait(1)
+	FadeToColor([30.0],0)
+	Wait(2)
+	ActionOverride(Player1,JumpToPoint([731.553]))
+	ActionOverride(Player2,JumpToPoint([798.537]))
+	ActionOverride(Player3,JumpToPoint([724.608]))
+	ActionOverride(Player4,JumpToPoint([772.591]))
+	ActionOverride(Player5,JumpToPoint([817.575]))
+	ActionOverride(Player6,JumpToPoint([764.554]))
+	ActionOverride("C0GULD",JumpToPoint([816.752]))
+	ActionOverride("C0GULD",Face(E))
+	JumpToPoint([1043.752])
+	Face(W)
+	Wait(2)
+	FadeFromColor([30.0],0)
+	Wait(4)
+	StartDialogNoSet("C0GULD")
+END
