@@ -503,7 +503,7 @@ StartCutScene("C0GUCS3")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0GuElfFinal","GLOBAL",3)~ THEN C0GULDJ guld-sword
 ~The magic within this sword... it feels as alive as you or I, <CHARNAME>. By the Green Goddess, I feel as though decades of my youth have been restored to me.~ [C0BLANK]
-DO ~SetGlobal("C0GuElfFinal","GLOBAL",3)~
+DO ~SetGlobal("C0GuElfFinal","GLOBAL",4)~
 = ~I wonder, was it the battle which caused it to awaken... or the understanding of having a purpose, once more? Regardless... I will honor it, and its last wielder, by using it to eradicate the evils in our way.~
 END
   ++ ~You definitely seem more spirited all of a sudden.~ + guld-sword-1
